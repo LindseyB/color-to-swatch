@@ -15,8 +15,6 @@ Generates a .swatches file that can be used in Procreate from a passed in [color
 
 ```
 ⇒ pip install -r requirements.txt 
-⇒ brew tap caskroom/cask
-⇒ brew cask install chromedriver
 ```
 
 ### Examples
