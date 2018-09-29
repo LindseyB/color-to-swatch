@@ -9,8 +9,10 @@ import re
 @click.command()
 @click.option('--url', default='https://color.adobe.com/vintage-card-color-theme-3165833/', help='The url to the adobe color page')
 
-#TODO: Add url validation
 def convert(url):
+	if not re.match(r'https://color.adobe.com/[0-9a-zA-Z_\-]+-color-theme-\d+', url):
+		raise ValueError("Hmmm... this doesn't look like an Adobe Color URL. Wanna try that again?")
+
 	name, hex_colors = get_hex_values(url)
 	colors = convert_hex_to_hsl(hex_colors)
 
