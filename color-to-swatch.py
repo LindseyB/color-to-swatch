@@ -30,7 +30,14 @@ def convert(url):
 # Ugh, so adobe color has no API and is JS only
 # We use selenium to go get the colors
 def get_hex_values(url):
-	driver = webdriver.Chrome() #TODO: get headless working
+	# TODO: just fetch from the API the following is what the site is doing:
+	# curl -X GET \
+    # 'https://color.adobe.com/api/v2/themes/11247443?metadata=all' \
+    # -H 'x-api-key: 7810788A1CFDC3A717C58F96BC4DD8B4'
+    # the id appears to come from the url of the color https://color.adobe.com/[name-slug]-color-theme-[id]/
+
+
+	driver = webdriver.Chrome() 
 	driver.set_window_size(1120, 550)
 	driver.get(url)
 	elements = driver.find_elements_by_css_selector('.themeBox li')
