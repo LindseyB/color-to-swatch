@@ -1,11 +1,9 @@
-import colorsys
 import click
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options  
 from colour import Color
 import zipfile
 import json
-import zipfile
 from slugify import slugify
 
 @click.command()
