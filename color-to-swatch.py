@@ -11,6 +11,7 @@ from slugify import slugify
 @click.command()
 @click.option('--url', default='https://color.adobe.com/vintage-card-color-theme-3165833/', help='The url to the adobe color page')
 
+#TODO: Add url validation
 def convert(url):
 	name, hex_colors = get_hex_values(url)
 	colors = convert_hex_to_hsl(hex_colors)
@@ -31,7 +32,7 @@ def convert(url):
 # Ugh, so adobe color has no API and is JS only
 # We use selenium to go get the colors
 def get_hex_values(url):
-	driver = webdriver.Chrome()
+	driver = webdriver.Chrome() #TODO: get headless working
 	driver.set_window_size(1120, 550)
 	driver.get(url)
 	elements = driver.find_elements_by_css_selector('.themeBox li')
