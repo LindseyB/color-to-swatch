@@ -11,4 +11,4 @@ colour == 0.1.5
 python_slugify == 1.2.6
 
 # color-to-swatch.py: 6
-requests == 2.20.0
+requests ==2.22.0
