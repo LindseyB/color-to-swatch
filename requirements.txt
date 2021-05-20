@@ -2,7 +2,7 @@
 # https://github.com/damnever/pigar
 
 # color-to-swatch.py: 1
-Click == 7.1.2
+Click == 8.0.1
 
 # color-to-swatch.py: 2
 colour == 0.1.5
